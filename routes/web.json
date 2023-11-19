@@ -1,0 +1,19 @@
+{
+  "routes": [
+    {
+      "path": "/",
+      "controller": "FrontController",
+      "method": "home"
+    },
+    {
+      "path": "/about",
+      "controller": "FrontController",
+      "method": "about"
+    },
+    {
+      "path": "/contact",
+      "controller": "FrontController",
+      "method": "contact"
+    }
+  ]
+}
