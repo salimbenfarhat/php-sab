@@ -2,20 +2,23 @@
 namespace PHP_SAB;
 class FrontController {
     public function home() {
-        echo 'Home';
-        echo '</br>';
-        $database = new Database();
-        $conn = $database->getConnection();
-        if ($conn) {
-            echo 'Successfully connected to the database.';
-        } else {
-            echo 'Failed to connect to the database.';
-        }
+      $database = new Database();
+      $conn = $database->getConnection();
+      $data = [];
+      if ($conn) {
+          $data['message'] = 'Successfully connected to the database.';
+      } else {
+          $data['message'] = 'Failed to connect to the database.';
+      }
+      $view = new View();
+      $view->render('home', 'default', $data);
     }
     public function about() {
-        echo 'About';
+      $view = new View();
+      $view->render('about', 'default');
     }
     public function contact() {
-        echo 'Contact';
+      $view = new View();
+      $view->render('contact', 'default');
     }
 }
