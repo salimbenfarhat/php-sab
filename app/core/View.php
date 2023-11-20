@@ -3,7 +3,7 @@ namespace PHP_SAB;
 class View {
     public function render($view, $layout, $data = []) {
         $content = $this->loadView($view, $data);
-        require_once Config::BASE_PATH . '/views/layouts/' . $layout . '.html';
+        require_once Config::BASE_PATH . '/views/layouts/' . $layout . '.layout.php';
     }
 
     public function loadView($view, $data) {

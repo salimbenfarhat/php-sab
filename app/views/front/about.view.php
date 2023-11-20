@@ -1,2 +1,3 @@
 <h1>À propos de nous</h1>
-<p>Ceci est la page À propos de notre site web.</p>
+<hr>
+<a href="<?= $baseUrl; ?>" alt="Retour à l'accueil">Retour à l'accueil</a>
