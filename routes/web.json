@@ -6,9 +6,34 @@
       "method": "home"
     },
     {
-      "path": "/about",
+      "path": "/a-propos",
       "controller": "FrontController",
       "method": "about"
+    },
+    {
+      "path": "/auth",
+      "controller": "AuthController",
+      "method": "redirectToLogin"
+    },
+    {
+      "path": "/auth/connexion",
+      "controller": "AuthController",
+      "method": "login"
+    },
+    {
+      "path": "/auth/inscription",
+      "controller": "AuthController",
+      "method": "signup"
+    },
+    {
+      "path": "/auth/reset-mdp",
+      "controller": "AuthController",
+      "method": "resetPassword"
+    },
+    {
+      "path": "/auth/reset-id",
+      "controller": "AuthController",
+      "method": "resetId"
     },
     {
       "path": "/contact",

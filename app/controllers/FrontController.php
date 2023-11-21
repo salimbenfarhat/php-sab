@@ -1,24 +1,30 @@
 <?php
 namespace PHP_SAB;
 class FrontController {
-    public function home() {
-      $database = new Database();
-      $conn = $database->getConnection();
-      $data = [];
-      if ($conn) {
-          $data['message'] = 'Successfully connected to the database.';
-      } else {
-          $data['message'] = 'Failed to connect to the database.';
-      }
-      $view = new View();
-      $view->render('home', 'default', $data);
+  protected $data = [];
+  public function __construct() {
+    $this->data['baseUrl'] = Config::BASE_URL;
+  }
+  public function home() {
+    $database = new Database();
+    $conn = $database->getConnection();
+    if ($conn) {
+      $this->data['message'] = 'Connexion à la base de données reussie.';
+    } else {
+      $this->data['message'] = 'Echec de la connexion à la base de données.';
     }
-    public function about() {
-      $view = new View();
-      $view->render('about', 'default');
-    }
-    public function contact() {
-      $view = new View();
-      $view->render('contact', 'default');
-    }
+    $this->data['pageTitle'] = 'Accueil';
+    $view = new View();
+    $view->render('home', 'default', $this->data);
+  }
+  public function about() {
+    $this->data['pageTitle'] = 'A propos';
+    $view = new View();
+    $view->render('about', 'default', $this->data);
+  }
+  public function contact() {
+    $this->data['pageTitle'] = 'Contact';
+    $view = new View();
+    $view->render('contact', 'default', $this->data);
+  }
 }
