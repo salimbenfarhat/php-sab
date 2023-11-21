@@ -18,7 +18,7 @@ class FrontController {
     $view->render('home', 'default', $this->data);
   }
   public function about() {
-    $this->data['pageTitle'] = 'A propos';
+    $this->data['pageTitle'] = 'About';
     $view = new View();
     $view->render('about', 'default', $this->data);
   }
