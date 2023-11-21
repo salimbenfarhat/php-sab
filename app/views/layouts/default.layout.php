@@ -9,11 +9,15 @@ use PHP_SAB\Config;
 </head>
 <body>
     <header>
-        <h1>Welcome to <?= Config::SITE_NAME; ?></h1>
+        <h1><?= Config::SITE_NAME; ?></h1>
         <nav>
-            <a href="<?= $data['baseUrl']; ?>" alt="Home">Home</a>
-            <a href="<?= $data['baseUrl'] . '/about'; ?>" alt="About">About</a>
+            <a href="<?= $data['baseUrl']; ?>" alt="Accueil">Accueil</a>
+            <a href="<?= $data['baseUrl'] . '/a-propos'; ?>" alt="A propos">A propos</a>
             <a href="<?= $data['baseUrl'] . '/contact'; ?>" alt="Contact">Contact</a>
+        </nav>
+        <nav>
+            <a href="<?= $data['baseUrl'] . '/auth'; ?>" alt="Connexion">Connexion</a>
+            <a href="<?= $data['baseUrl'] . '/auth/inscription'; ?>" alt="Inscription">Inscription</a>
         </nav>
     </header>
 

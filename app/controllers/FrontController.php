@@ -9,11 +9,11 @@ class FrontController {
     $database = new Database();
     $conn = $database->getConnection();
     if ($conn) {
-      $this->data['message'] = 'Successfully connected to the database.';
+      $this->data['message'] = 'Connexion à la base de données reussie.';
     } else {
-      $this->data['message'] = 'Failed to connect to the database.';
+      $this->data['message'] = 'Echec de la connexion à la base de données.';
     }
-    $this->data['pageTitle'] = 'Home';
+    $this->data['pageTitle'] = 'Accueil';
     $view = new View();
     $view->render('home', 'default', $this->data);
   }
