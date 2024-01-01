@@ -8,7 +8,7 @@ class Route {
 
         foreach ($routes as $route) {
             if ($url == $route['path']) {
-                $controller = 'PHP_SAB\\' . $route['controller'];
+                $controller = 'PHP_SAB\Controllers\\' . $route['controller'];
                 $method = $route['method'];
                 $controller = new $controller;
                 $controller->$method();

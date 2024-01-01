@@ -9,5 +9,5 @@ class Config {
     const DB_HOST = 'localhost';
     const DB_NAME = 'php-sab';
     const DB_USER = 'root';
-    const DB_PASS = '';
+    const DB_PASS = 'sablab';
 }

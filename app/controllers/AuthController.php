@@ -1,5 +1,7 @@
 <?php
-namespace PHP_SAB;
+namespace PHP_SAB\Controllers;
+use PHP_SAB\Config, PHP_SAB\Database, PHP_SAB\View;
+
 class AuthController {
   
   protected $data = [];

@@ -1,0 +1,150 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+main {
+    margin: 2em 0;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background: #50b3a2;
+    color: white;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #e8491d 3px solid;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header a {
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+header li {
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+
+header #branding {
+    float: left;
+}
+
+header #branding h1 {
+    margin: 0;
+}
+
+header nav {
+    margin: 10px;
+    background: navy;
+    padding: 1em;
+}
+
+header .highlight, header .current a {
+    color: #e8491d;
+    font-weight: bold;
+}
+
+header a:hover {
+    color: #cccccc;
+    font-weight: bold;
+}
+
+h1, h2, h3 {
+    font-weight: 700;
+    margin: 0;
+}
+
+h1 {
+    font-size: 2em;
+    color: #333;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.5em;
+    color: #333;
+}
+
+h3 {
+    font-size: 1.3em;
+    color: #333;
+}
+
+p {
+    line-height: 1.7em;
+}
+
+.btn-primary {
+    background-color: #50b3a2;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 600;
+    padding: 0.4em;
+}
+
+.btn-primary:hover {
+    background-color: #3a7c6c;
+    color: #fff;
+}
+
+form {
+    background-color: #fff;
+    padding: 2em 0;
+}
+
+form .form-group {
+    margin-bottom: 15px;
+    text-align: left;
+    width: 600px;
+}
+
+form .form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form .form-group input,
+form .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form .form-group input:focus,
+form .form-group textarea:focus {
+    border-color: #50b3a2;
+}
+
+form .form-group input.is-valid,
+form .form-group textarea.is-valid {
+    border-color: #28a745;
+}
+
+form .form-group input.is-invalid,
+form .form-group textarea.is-invalid {
+    border-color: #dc3545;
+}
+
+.invalid-feedback {
+    color: #dc3545;
+}

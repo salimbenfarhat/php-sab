@@ -1,5 +1,8 @@
 <?php
-namespace PHP_SAB;
+namespace PHP_SAB\Controllers;
+use PHP_SAB\Config, PHP_SAB\Database, PHP_SAB\View, PHP_SAB\ContactFormHandler;
+
+
 class FrontController {
   protected $data = [];
   public function __construct() {
@@ -23,6 +26,23 @@ class FrontController {
     $view->render('about', 'default', $this->data);
   }
   public function contact() {
+    $this->data['errors'] = [];  // Initialisez le tableau d'erreurs
+    
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+        $formData = [
+            'name' => $_POST['name'] ?? '',
+            'email' => $_POST['email'] ?? '',
+            'message' => $_POST['message'] ?? ''
+        ];
+
+        $errors = ContactFormHandler::processForm($formData);
+
+        if (!empty($errors)) {
+            // Le formulaire contient des erreurs, les afficher dans la vue
+            $this->data['errors'] = $errors;
+        }
+    }
     $this->data['pageTitle'] = 'Contact';
     $view = new View();
     $view->render('contact', 'default', $this->data);
