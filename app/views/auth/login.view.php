@@ -2,7 +2,6 @@
 <form action="/auth/connexion" method="post">
   <label for="email">Adresse e-mail :</label>
   <input type="email" id="email" name="email" required>
-
   <button type="submit">Se connecter</button>
 </form>
 <hr>

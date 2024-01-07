@@ -1,9 +1,9 @@
 <?php
 namespace PHP_SAB;
+
 class FormHandler {
     public static function validateForm($formData, $validationRules) {
         $errors = [];
-
         foreach ($validationRules as $fieldName => $rules) {
             foreach ($rules as $rule) {
                 switch ($rule) {
@@ -17,11 +17,9 @@ class FormHandler {
                             $errors[$fieldName][] = "L'adresse email n'est pas valide.";
                         }
                         break;
-                    // Ajoutez d'autres règles de validation au besoin
                 }
             }
         }
-
         return $errors;
     }
 }

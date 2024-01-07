@@ -21,11 +21,9 @@ use PHP_SAB\Config;
             <a href="<?= Config::BASE_URL . '/auth/inscription'; ?>" alt="Inscription">Inscription</a>
         </nav>
     </header>
-
     <main>
         <?= $content; ?>
     </main>
-
     <footer>
         <p>© 2023 <?= Config::SITE_NAME; ?></p>
     </footer>

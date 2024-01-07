@@ -1,0 +1,18 @@
+CREATE TABLE users (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    email VARCHAR(255) UNIQUE NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    username VARCHAR(255) UNIQUE,
+    phone_number VARCHAR(20) UNIQUE,
+    is_verified TINYINT DEFAULT 0,
+    remember_token VARCHAR(100),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+CREATE TABLE verification_tokens (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    user_id INT,
+    token VARCHAR(100) UNIQUE NOT NULL,
+    expires_at TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id)
+);
