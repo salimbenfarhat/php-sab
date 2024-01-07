@@ -26,6 +26,31 @@
       "method": "signup"
     },
     {
+      "path": "/auth/inscription/confirmation",
+      "controller": "AuthController",
+      "method": "signupConfirmation"
+    },
+    {
+      "path": "/auth/inscription/verification",
+      "controller": "AuthController",
+      "method": "signupAccountValidation"
+    },
+    {
+      "path": "/auth/inscription/verification/:token",
+      "controller": "AuthController",
+      "method": "signupAccountValidation"
+    },
+    {
+      "path": "/auth/inscription/verification-reussie",
+      "controller": "AuthController",
+      "method": "signupVerifySuccess"
+    },
+    {
+      "path": "/auth/inscription/verification-echouee",
+      "controller": "AuthController",
+      "method": "signupVerifyFail"
+    },
+    {
       "path": "/auth/reset-mdp",
       "controller": "AuthController",
       "method": "resetPassword"
